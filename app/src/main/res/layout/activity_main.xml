@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="tutorial"
+            type="databinding.com.databindingtutorial.model.TutorialData" />
+        <variable
+            name="activity"
+            type="databinding.com.databindingtutorial.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Tutorial Title:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tutorial_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{tutorial.tutorialTitle}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Tutorial Description:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tutorial_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{tutorial.tutorialDescription}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Author Name:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{tutorial.authorName}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Number of Reading:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/number_of_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(tutorial.numberOfReadings)}" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/change_tutorial"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::changeTutorial}"
+            android:text="Change Tutorial" />
+
+    </LinearLayout>
+</layout>
