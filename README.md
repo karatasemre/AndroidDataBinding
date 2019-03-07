@@ -1,5 +1,5 @@
 # Android Data Binding
 
-##-Observable 
+## -Observable 
 
-##-Data Binding
+## -Data Binding
